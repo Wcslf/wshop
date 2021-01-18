@@ -1,0 +1,21 @@
+<volist name="coupon_list" id="coupon">
+    <notin name="$coupon['id']" value="$user_coupon_cid">
+        <div class="maleri30">
+            <div class="alcowlone p">
+                <div class="goods-limit fl">
+                    <div class="goodsimgbo fl">
+                        <img src="{$store_list[$coupon[store_id]]['store_logo']}"/>
+                    </div>
+                    <div class="goods-limit-fo fl">
+                        <p class="name">仅可购买{$store_list[$coupon[store_id]]['store_name']}商品</p>
+                        <p class="condition"><em>{$coupon.money|intval}</em>满{$coupon.condition|intval}元可用</p>
+                    </div>
+                </div>
+                <div class="get-limit fr">
+                    canvas class="alreadyget" data-num="<notempty name='$coupon[createnum]'>{:round($coupon[send_num]/$coupon[createnum]*100,2)}<else/>0</notempty>"  width="100"  height="100"></canvas>
+                    <a class="clickgetcoupon" data-coupon-id="{$coupon.id}" onclick="getCoupon(this)">点击领取</a>
+                </div>
+            </div>
+        </div>
+    </notin>
+</volist>

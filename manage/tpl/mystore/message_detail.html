@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>消息详情</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/SellerAPP.css">
+    <script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/style.js " type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="message-details seller-top">
+    <a href="message_list.html"><img src="../../images/retu.png"></a>
+    <span>消息详情</span>
+</div>
+<div class="message-details-con">
+    <h2>系统消息</h2>
+    <div class="message-time"><b>类型：<i>系统消息</i></b><em>时间：<i id="date">----/--/--</i></em></div>
+    <div class="message-container" id="message-container">
+
+        <!--    谁，执我之手，敛我半世癫狂；-->
+        <!--　　谁，吻我之眸，遮我半世流离；-->
+
+        <!--　　谁，抚我之面，慰我半世哀伤；-->
+        <!--　　谁，携我之心，融我半世冰霜；-->
+
+        <!--　　谁，扶我之肩，驱我一世沉寂。-->
+        <!--　　谁，唤我之心，掩我一生凌轹。-->
+        <!--　　谁，弃我而去，留我一世独殇；-->
+        <!--　　谁，可明我意，使我此生无憾；-->
+        <!--　　谁，可助我臂，纵横万载无双；-->
+        <!--　　谁，可倾我心，寸土恰似虚弥；-->
+
+        <!--　　谁，可葬吾怆，笑天地虚妄，吾心狂。-->
+
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var sm_id = GetUrlParameter("sm_id");
+        if (sm_id == "") {
+            return false;
+        }
+        var url = ApiUrl + "/Index/storeMsgInfo";
+        $.post(url, {id: sm_id}, function (data) {
+            var json = eval("(" + data + ")");
+            if (json.status == 1) {
+                $("#message-container").html(json.result.content);
+                $("#date").html(datetime(json.result.addtime));
+            } else {
+                layer.open({content: json.msg, time: 2});
+            }
+        });
+    });
+
+</script>

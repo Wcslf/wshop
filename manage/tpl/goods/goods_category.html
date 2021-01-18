@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>商品类目</title>
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
+<link rel="stylesheet" type="text/css" href="../../css/SellerAPP.css">
+<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="goods-category-top seller-top">
+	<a href="../mystore/seller_index.html"><img src="../../images/retu.png"></a>
+	<span>商品类目</span>
+</div>
+<div class="first-category">
+	<div class="first-category-tit" id="first-category-tit"><input type="button" value="一级类目"></div>
+    <div class="first-category-con" id="first-category-con">
+    	<ul>
+        	<li><span>个人化妆</span></li>
+            <li><span>图书、音像、电子书</span></li>
+            <li><span>手机、数码、通信</span></li>
+            <li class="categroy-cur"><span>家用电器</span></li>
+            <li><span>户外运动</span></li>
+            <li><span>电脑办公</span></li>
+            <li><span>男装、女装、童装</span></li>
+            <li></li>
+            <li><span>鞋、箱包、珠宝、手表</span></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<div class="first-category">
+	<div class="first-category-tit"><input type="button" value="二级类目"></div>
+    <div class="first-category-con">
+    	<ul>
+        	<li><span>个人化妆</span></li>
+            <li><span>图书、音像、电子书</span></li>
+            <li><span>手机、数码、通信</span></li>
+            <li><span>家用电器</span></li>
+            <li><span>户外运动</span></li>
+            <li><span>电脑办公</span></li>
+            <li><span>男装、女装、童装</span></li>
+            <li></li>
+            <li><span>鞋、箱包、珠宝、手表</span></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<div class="first-category">
+	<div class="first-category-tit"><input type="button" value="三级类目"></div>
+    <div class="first-category-con">
+    	<ul>
+        	<li><span>个人化妆</span></li>
+            <li><span>图书、音像、电子书</span></li>
+            <li><span>手机、数码、通信</span></li>
+            <li><span>家用电器</span></li>
+            <li><span>户外运动</span></li>
+            <li><span>电脑办公</span></li>
+            <li><span>男装、女装、童装</span></li>
+            <li></li>
+            <li><span>鞋、箱包、珠宝、手表</span></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<div class="goods-category-bot">
+	<div class="category-group"><span>您当前选择的商品类目：</span><br><i> 家居、家具、家装、厨具 &gt;&gt; 家装建材 &gt;&gt; 墙地材料</i></div>
+    <div class="relesae-complete"><input type="button" value="确定"></div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+    $("#first-category-tit").click(function(){
+		$("#first-category-con").toggle(function(){$("#first-category-tit").css("background","url(../images/46854.png) center left no-repeat")},);
+		})
+});
+</script>
+</body>
+</html>

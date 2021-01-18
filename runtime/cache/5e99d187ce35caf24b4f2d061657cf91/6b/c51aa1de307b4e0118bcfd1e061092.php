@@ -1,0 +1,4 @@
+<?php
+//000031104000
+ exit();?>
+[{"ad_id":108,"pid":52,"media_type":0,"ad_name":"\u81ea\u5b9a\u4e49\u5e7f\u544a\u540d\u79f0","ad_link":"","ad_code":"\/public\/upload\/ad\/2019\/05-29\/dcf8787a71fc4e61e1580304ddee09ce.jpg","start_time":1451577600,"end_time":1735660800,"link_man":"","link_email":"","link_phone":"","click_count":0,"enabled":1,"orderby":0,"target":0,"bgcolor":"#ffffff","ad_key":""},{"ad_id":109,"pid":52,"media_type":0,"ad_name":"\u81ea\u5b9a\u4e49\u5e7f\u544a\u540d\u79f0","ad_link":"##","ad_code":"\/public\/upload\/ad\/2019\/05-29\/5e30041183d9ca2164ee92fc12616e2c.jpg","start_time":1451577600,"end_time":1735660800,"link_man":"","link_email":"","link_phone":"","click_count":0,"enabled":1,"orderby":0,"target":0,"bgcolor":"#ffffff","ad_key":""}]

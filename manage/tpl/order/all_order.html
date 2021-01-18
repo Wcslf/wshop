@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>全部订单</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/SellerAPP.css">
+    <script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/style.js " type="text/javascript" charset="utf-8"></script>
+</head>
+<style>
+
+</style>
+<body>
+<div class="evaluation-tit seller-top">
+    <a href="#"><img src="../../images/retu.png"></a>
+    <span>订单管理</span>
+</div>
+<div class="evaluation-search">
+    <form>
+        <div class="search-text"><img src="../../images/search.png"><input type="text" placeholder="输入你想搜索的订单号"></div>
+        <div class="search-btn"><input type="button" value="查询"></div>
+    </form>
+</div>
+<div class="evaluation-con">
+    <div class="evaluation-con-tit">
+        <ul>
+            <li class="evaluation-cur"><a href="#">进行中</a></li>
+            <li><a href="#">已完成</a></li>
+            <li><a href="#">已关闭</a></li>
+        </ul>
+    </div>
+    <div class="order-management-detail">
+        <ul>
+            <li class="order-management-cur"><a href="#"><span>4</span><br><i>全部</i></a></li>
+            <li><a href="#"><span>0</span><br><i>待发货</i></a></li>
+            <li><a href="#"><span>10</span><br><i>待付款</i></a></li>
+            <li><a href="#"><span>2</span><br><i>已发货</i></a></li>
+        </ul>
+    </div>
+    <div class="evaluation-con-txt">
+        <ul id="order_list">
+            <!--<li>-->
+            <!--<div class="evaluation-pro-tit"><span>订单号：<i>201711061234X</i></span><a href="#">复制订单号</a><em>待发货</em>-->
+            <!--</div>-->
+            <!--<div class="evaluation-pro-con order-pending-pro">-->
+            <!--<div class="evaluation-pro-pic"><img src="../../images/pro.png"></div>-->
+            <!--<div class="evaluation-pro-info"><big>夏普(SHARP)A高平板</big><br>-->
+            <!--<small>下单时间：<i>2017-11-06 15：23</i></small>-->
+            <!--</div>-->
+            <!--<div class="evaluation-pro-pri"><span>¥59.00</span><br><b>x2</b></div>-->
+            <!--</div>-->
+            <!--<div class="order-num-info"><span>快递费：¥20.00</span><b> 合计：¥98.00</b><i>共1件商品&nbsp;</i></div>-->
+            <!--<div class="order-pending-opa"><a href="#" class="shipping">立即发货</a><a href="#" class="check-detail">查看详情</a>-->
+            <!--</div>-->
+            <!--</li>-->
+        </ul>
+
+        <!--<li>-->
+        <!--<div class="evaluation-pro-tit"><span>订单号：<i>201711061234X</i></span><a href="#">复制订单号</a><em>待付款</em></div>-->
+        <!--<div class="evaluation-pro-con order-pending-pro">-->
+        <!--<div class="evaluation-pro-pic"><img src="../../images/pro.png"></div>-->
+        <!--<div class="evaluation-pro-info"><big>夏普(SHARP)A高平板</big><br><small>下单时间：<i>2017-11-06  15：23</i></small></div>-->
+        <!--<div class="evaluation-pro-pri"><span>¥59.00</span><br><b>x2</b></div>-->
+        <!--</div>-->
+        <!--<div class="order-num-info"><span>快递费：¥20.00</span><b> 合计：¥98.00</b><i>共1件商品&nbsp;</i></div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<div class="evaluation-pro-tit"><span>订单号：<i>201711061234X</i></span><a href="#">复制订单号</a><em>已发货</em></div>-->
+        <!--<div class="evaluation-pro-con order-pending-pro">-->
+        <!--<div class="evaluation-pro-pic"><img src="../../images/pro.png"></div>-->
+        <!--<div class="evaluation-pro-info"><big>夏普(SHARP)A高平板</big><br><small>下单时间：<i>2017-11-06  15：23</i></small></div>-->
+        <!--<div class="evaluation-pro-pri"><span>¥59.00</span><br><b>x2</b></div>-->
+        <!--</div>-->
+        <!--<div class="order-num-info"><span>快递费：¥20.00</span><b> 合计：¥98.00</b><i>共1件商品&nbsp;</i></div>-->
+        <!--<div class="buyer-info">-->
+        <!--<div class="buyer-name"><img src="../../images/me.png"><span>王小明</span><i>153055265561</i></div>-->
+        <!--<div class="buyer-address"><img src="../../images/address.png"><span>广东省深圳市龙华新区民治大道808室</span></div>-->
+        <!--</div>-->
+        <!--<div class="order-pending-opa"><a href="#" class="check-detail">查看详情</a></div>-->
+        <!--</li>-->
+        <!--</ul>-->
+    </div>
+</div>
+
+<script id="tpl" type="text/html">
+
+    <% for (var k in orderList) { var v = orderList[k]; %>
+    <li>
+        <div class="evaluation-pro-tit"><span>订单号：<i>orderList[k].order_sn</i></span><a href="#">复制订单号</a><em>待发货</em>
+        </div>
+        <div class="evaluation-pro-con order-pending-pro">
+            <div class="evaluation-pro-pic"><img src="../../images/pro.png"></div>
+            <div class="evaluation-pro-info"><big>夏普(SHARP)A高平板</big><br>
+                <small>下单时间：<i>2017-11-06 15：23</i></small>
+            </div>
+            <div class="evaluation-pro-pri"><span>¥59.00</span><br><b>x2</b></div>
+        </div>
+        <div class="order-num-info"><span>快递费：¥20.00</span><b> 合计：¥98.00</b><i>共1件商品&nbsp;</i></div>
+        <div class="order-pending-opa"><a href="#" class="shipping">立即发货</a><a href="#" class="check-detail">查看详情</a>
+        </div>
+    </li>
+    <%}%>
+
+</script>
+</body>
+</html>
+<script src="/template/mobile/default/static/js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/template.js"></script>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/tpl/order_list.js"></script>
+<script type="text/javascript" src="../../js/ajaxload.js"></script>
+<script>
+    function ajax_load() {
+        getOrderList();
+    }
+</script>

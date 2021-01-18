@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>消息详情</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/SellerAPP.css">
+    <script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/style.js " type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="message-empty seller-top">
+    <span>系统消息</span>
+</div>
+<div id="message_info"></div>
+
+<!--（过期时间：<%= toDateString(code_list[i].vr_indate) %>）-->
+<div class="seller-index-bot">
+    <ul>
+        <li><a href="seller_index.html"><img src="../../images/shouye.png"><br><span>首页</span></a></li>
+        <li class="seller-index-cur"><a href="#"><img src="../../images/xiaoxi-cur.png"><br><span>消息中心</span><i
+                id="message">0</i></a></li>
+        <li><a href="my_store.html"><img src="../../images/dianpu.png"><br><span>店铺管理</span></a></li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="/template/mobile/default/static/js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../js/zepto.min.js"></script>
+<script type="text/javascript" src="../../js/template.js"></script>
+<script type="text/javascript" src="../../js/config.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/tpl/message_empty.js?v=454"></script>
+<script type="text/javascript">
+    template.helper('tsToDateString', function (t) {
+        var d = new Date(parseInt(t) * 1000);
+        var s = '';
+//        s += d.getFullYear() + '年';
+//        s += (d.getMonth() + 1) + '月';
+//        s += d.getDate() + '日';
+        s += d.getHours() + '：';
+        s += d.getMinutes() + '';
+//        s += d.getSeconds() + '：';
+        return s;
+    });
+    $(document).ready(function () {
+        function getMessageInfo() {
+            var url = ApiUrl + "/Index/storeMsg";
+            //http://apim.tp-shop.cn/sellerApi/Index/index
+            $.post(url, {}, function (data) {
+                var json = eval("(" + data + ")");
+                if (json.status == 1) {
+                    $("#msgcount").html(json.result.msgCount);
+                    $
+                }
+            });
+        }
+        getMessageInfo();
+    })
+
+</script>

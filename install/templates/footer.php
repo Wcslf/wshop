@@ -1,0 +1,1 @@
+<div class="footer"> &copy; 2015-2026 <a href="http://www.phpyuanmashe.com" target="_blank">www.tp-shop.cn</a> 深圳二月鸟飞出品</div>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>店铺首页</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/style.css">
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/iconfont.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/020Mobile.css">
+<script src="__STATIC__/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="__STATIC__/js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
+<script src="__STATIC__/js/style.js " type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="o2o-store-top">
+	<div class="o2o-store-opa">
+    	<a href="#"><img src="__STATIC__/images/return.png" alt="返回"></a>
+        <a href="#" class="collect-store"><img src="__STATIC__/images/collect.png" alt="收藏"></a>
+        <a href="#" class="sharing-store"><img src="__STATIC__/images/sharing.png" alt="分享"></a>
+    </div>
+    <div class="o2o-store-info">
+    	<div class="o2o-store-logo"><img src="__STATIC__/images/seller-logo01.png"></div>
+        <div class="o2o-store-text"><h3>TPshop线下店</h3><p>商家配送&nbsp;/&nbsp;<em>30</em>分钟送达&nbsp;/&nbsp;配送费￥<i>3</i></p><p>公告：此处填写商家的广告或者商品注意事项等不回可能可能</p></div>
+    </div>
+    <div class="o2o-store-act1" id="st-act-detail"><p><b class="new">新</b><i>新用户下单立减5元，满50减20</i><a href="#"><em>6</em>个活动</a></p></div>
+</div>
+<div class="store-index-container">
+    <div class="store-nav">
+        <ul>
+            <li class="store-nav-cur"><a href="javascript:void(0);">商品</a></li>
+            <li><a href="store-appraise.html">评价</a></li>
+            <li><a href="store-information.html">店铺</a></li>
+        </ul>
+    </div>
+    <div class="sicon">
+    	<div class="sicon-left">
+        	<ul>
+            	<li class="category-cur"><img src="__STATIC__/images/icon-coupons.png"><em>优惠</em></li>
+                <li><img src="__STATIC__/images/icon-fire.png"><em>热销</em></li>
+                <li><b>商品分类名称</b><i>2</i></li>
+                <li><b>超过两行则不显示</b></li>
+                <li><b>清真类</b><i>1</i></li>
+                <li><b>小炒类</b></li>
+            </ul>
+        </div>
+        <div class="sicon-right">
+        	<div class="template-coupons">
+            	<span class="tem-coupon-le"><b><i>5</i>张优惠券</b><br><em>满15减5，满30减10，满50减20</em></span>
+                <span class="tem-coupon-ri"><a href="#"><b>立即领取</b></a></span>
+            </div>
+            <div class="store-act-ban">
+            	<img src="__STATIC__/images/store-ban.png"><!--活动banner，尺寸520*140px，最多添加两张若无活动，则此模块不显示-->
+            </div>
+            <div class="goods-list">
+            	<h4>热销商品（<em>2</em>）</h4>
+                <ul>
+                	<li>
+                    	<div class="goods-picture"><img src="__STATIC__/images/food-pic.png"></div>
+                        <div class="goods-text">
+                        	<h3>TPshop招牌牛肉饭好吃不上火便宜又实惠</h3>
+                            <p>此处填写其他信息，可不填</p>
+                            <p class="sales-rate"><b>月售<i>386</i>笔</b><em>好评率<i>98%</i></em></p>
+                            <div class="price-and-quantity"><span class="price">￥<big>18</big></span><span class="goods-quantity"><b class="goods-reduce">-</b><i>0</i><b class="goods-add">+</b></span></div>
+                        </div>
+                    </li>
+                    <li>
+                    	<div class="goods-picture"><img src="__STATIC__/images/food-pic.png"></div>
+                        <div class="goods-text">
+                        	<h3>TPshop招牌牛肉饭好吃不上火便宜又实惠</h3>
+                            <p>此处填写其他信息，可不填</p>
+                            <p class="sales-rate"><b>月售<i>386</i>笔</b><em>好评率<i>98%</i></em></p>
+                            <div class="price-and-quantity"><span class="price">￥<big>18</big></span><span class="goods-quantity"><b class="goods-reduce">-</b><i>0</i><b class="goods-add">+</b></span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="goods-list">
+            	<h4>商品分类名称（<em>1</em>）</h4>
+                <ul>
+                	<li>
+                    	<div class="goods-picture"><img src="__STATIC__/images/food-pic.png"></div>
+                        <div class="goods-text">
+                        	<h3>TPshop招牌牛肉饭好吃不上火便宜又实惠</h3>
+                            <p>此处填写其他信息，可不填</p>
+                            <p class="sales-rate"><b>月售<i>386</i>笔</b><em>好评率<i>98%</i></em></p>
+                            <div class="price-and-quantity"><span class="price">￥<big>18</big></span><span class="goods-quantity"><b class="goods-reduce">-</b><i>0</i><b class="goods-add">+</b></span></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="o2o-shopping-car" id="o2o-shopping-car">
+		<div class="shopping-car-contain">
+    		<div class="shopping-car-tit">
+        		<span><input type="checkbox" id="checkall"><label for="checkall"></label></span>
+            	<em>全选<b>（已选<i>1</i>件商品）</b></em>
+            	<a href="#"><img src="__STATIC__/images/shopping-car-del.png">清空</a>
+        	</div>
+        	<div class="shopping-car-goods" id="scg">
+        		<ul>
+            		<li>
+                		<span class="car-goods-select"><input type="checkbox" id="checkbox01"><label for="checkbox01"></label></span>
+                    	<span class="car-store-name">TPshop牛肉火锅牛肉火锅</span>
+                    	<span class="car-goods-price">￥<b>58</b></span>
+                    	<span class="car-goods-quantity"><b class="goods-reduce">-</b><i>0</i><b class="goods-add">+</b></span>
+                	</li>
+                	<li>
+                		<span class="car-goods-select"><input type="checkbox" id="checkbox02" checked=""><label for="checkbox02"></label></span>
+                    	<span class="car-store-name">TPshop牛肉火锅牛肉火锅</span>
+                    	<span class="car-goods-price">￥<b>58</b></span>
+                    	<span class="car-goods-quantity"><b class="goods-reduce">-</b><i>0</i><b class="goods-add">+</b></span>
+                	</li>
+                	<li>
+                		<span class="car-goods-select"><input type="checkbox" id="checkbox03"><label for="checkbox03"></label></span>
+                    	<span class="car-store-name">TPshop牛肉火锅牛肉火锅</span>
+                    	<span class="car-goods-price">￥<b>58</b></span>
+                    	<span class="car-goods-quantity"><b class="goods-reduce">-</b><i>0</i><b class="goods-add">+</b></span>
+                	</li>
+            	</ul>
+        	</div>
+    	</div>
+	</div>
+    <!--购物车-满足金额-->
+    <div class="shopping-car-full" id="shopping-car-full">
+        <div class="car-logo" id="car-logo"><img src="__STATIC__/images/car-logo-white.png"><i>2</i></div>
+        <div class="car-totle-price"><small>￥</small><big>21</big><br><span>配送费￥<i>3</i></span></div>
+        <div class="confirm-order"><a href="#">提交订单</a></div>
+    </div>
+    <!--购物车-未满金额-->
+    <div class="shopping-car-discontent" style="display:none;">
+        <div class="car-logo"><img src="__STATIC__/images/car-logo-white.png"><i>2</i></div>
+        <div class="car-totle-price"><small>￥</small><big>21</big><br><span>配送费￥<i>3</i></span></div>
+        <div class="confirm-order"><a href="javascript:void(0);">差￥<i>5</i>起送</a></div>
+    </div>
+    <!--购物车-未添加商品-->
+    <div class="shopping-car-addnone" style="display:none;">
+        <div class="car-logo"><img src="__STATIC__/images/shopping-car-addnone.png"></div>
+        <div class="car-totle-price"><small>￥</small><big>0</big><br><span>配送费￥<i>3</i></span></div>
+        <div class="confirm-order"><a href="javascript:void(0);">满￥<i>20</i>起送</a></div>
+    </div>
+</div>
+<!--下拉列表-->
+<div class="pull-activity-container" id="pull-activity-container">
+	<div class="o2o-store-act2">
+    	<p><b class="full">满</b><i>满20减5，满40减15，满60减30</i></p>
+        <p><b class="full">折</b><i>3件商品打9折，满5件商品打8折</i></p>
+        <p><b class="give">赠</b><i>买A送B商家自定义，同种商品不宜设置过多活动以免冲突</i></p>
+    </div>
+    <div class="o2o-store-coupons">
+    	<div class="store-coupons-tit"><span>店铺优惠券</span></div>
+        <div class="store-coupons">
+        	<span class="coupons-left">￥<b>10</b></span>
+            <span class="coupons-mid"><em>满<i>30</i>元可用</em><b>2017.12.8-2017.12.15</b></span>
+            <span class="coupons-right"><a href="#"><b>立即领取</b></a></span>
+        </div>
+        <div class="store-coupons">
+        	<span class="coupons-left">￥<b>20</b></span>
+            <span class="coupons-mid"><em>满<i>50</i>元可用</em><b>2017.12.8-2017.12.15</b></span>
+            <span class="coupons-right"><a href="#"><b>立即领取</b></a></span>
+        </div>
+        <div class="store-coupons">
+        	<span class="coupons-left">￥<b>50</b></span>
+            <span class="coupons-mid"><em>满<i>120</i>元可用</em><b>2017.12.8-2017.12.15</b></span>
+            <span class="coupons-right"><a href="#"><b>立即领取</b></a></span>
+        </div>
+        <div class="store-coupons-bot"><a href="#"><img src="__STATIC__/images/slide.png"><br>点击上滑继续购物</a></div>
+    </div>
+</div>
+<script>
+window.onload=function(){
+	var sad=document.getElementById("st-act-detail");
+		pac=document.getElementById("pull-activity-container");
+	sad.onclick=function(){
+		pac.style.display="block";
+		}
+}
+//购物车内容显示隐藏	
+$(document).ready(function(){ 
+  	$("#car-logo").click(function(){ 
+  		$("#o2o-shopping-car").toggle();
+  	});
+}); 
+//购物车全选	
+$("#checkall").click(function(){   
+    if(this.checked){   
+        $("#scg :checkbox").prop("checked", true);  
+    }else{   
+		$("#scg :checkbox").prop("checked", false);
+    }   
+});
+//购物车增加数量
+$(".goods-add").click(function(){
+	$(this).prevAll().css("display", "inline-block");
+	var n = $(this).prev().text();  
+	var num = parseInt(n) + 1;  
+	if (num == 0) { return; }  
+	$(this).prev().text(num); 
+});
+//购物车减少数量
+$(".goods-reduce").click(function(){
+	var n = $(this).next().text();  
+	var num = parseInt(n) - 1;	
+	
+	$(this).next().text(num);
+	
+	if (num <= 0) {  
+		$(this).next().css("display", "none");  
+		$(this).css("display", "none");
+		$(this).parent(".car-goods-quantity").parent().css("display","none");  
+		return  
+	}
+});
+</script>
+</body>
+</html>
